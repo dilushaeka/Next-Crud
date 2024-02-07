@@ -6,7 +6,7 @@ import {
     MdAttachMoney,
     MdOutlineSettings,
     MdHelpCenter,
-
+    MdLogout,
 } from "react-icons/md"
 
 import MenuLink from "./menuLink/menuLink"
@@ -72,9 +72,15 @@ const Sidebar = async () => {
                         {cat.list.map((item) => (
                             <MenuLink item={item} key={item.title} />
                         ))}
+
                     </li>
                 ))}
             </ul>
+            <button className={styles.logout}>
+            <MdLogout/>
+                LogOut
+            </button>
+            
         </div>
     );
 };
